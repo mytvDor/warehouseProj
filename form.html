@@ -249,7 +249,7 @@
                     <label for="startup">I am a start-up</label>
                 </div>
                 <div class="form-group">
-                    <label for="industry">Industry</label>
+<!--                     <label for="industry">Industry</label>
                     <select id="industry" name="industry" required>
                         <option value="">Select Industry</option>
                         <option value="Event_and_Banquet_Furniture">Event and Banquet Furniture</option>
@@ -268,7 +268,10 @@
 
 
 
-                    </select>
+                    </select> -->
+                       <label for="industry">Industry</label>
+                    <input type="text" id="industry" name="industry" required>
+               
                 </div>
                 <div class="form-group">
                     <label for="businessModel">Business Type</label>
@@ -304,10 +307,10 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message"></textarea>
                 </div>
-                <div class="form-group full-width checkbox-group">
+<!--                 <div class="form-group full-width checkbox-group">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">Please note that this form submits your interest for services in Singapore.</label>
-                </div>
+                </div> -->
             </div>
             <button type="submit" class="submit-btn">Submit</button>
         </form>
@@ -343,7 +346,7 @@
                 storageNeeded: document.getElementById("storageNeeded").value,
                 serviceRequirements: document.getElementById("serviceRequirements").value,
                 message: document.getElementById("message").value,
-                terms: document.getElementById("terms").checked
+                // terms: document.getElementById("terms").checked
             };
 
             console.log(formData)
