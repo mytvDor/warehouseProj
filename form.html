@@ -294,7 +294,7 @@
                         <option value="non_Aircon">non Aircon</option>
                     </select>
                 </div>
-                <div class="form-group full-width">
+<!--                 <div class="form-group full-width">
                     <label for="serviceRequirements">Service Requirements</label>
                     <select id="serviceRequirements" name="serviceRequirements" required>
                         <option value="">Select Service Requirements</option>
@@ -302,6 +302,21 @@
                         <option value="Pick_and_pack">Pick and pack</option>
                         <option value="Delivery">Delivery</option>
                     </select>
+                </div> -->
+                 <div class="form-group">
+                    <label>Service Requirements</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="storage" name="serviceRequirements" value="Storage">
+                        <label for="storage">Storage</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="pickAndPack" name="serviceRequirements" value="Pick_and_pack">
+                        <label for="pickAndPack">Pick and pack</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="delivery" name="serviceRequirements" value="Delivery">
+                        <label for="delivery">Delivery</label>
+                    </div>
                 </div>
                 <div class="form-group full-width">
                     <label for="message">Message</label>
@@ -330,7 +345,13 @@
     <script>
         document.getElementById("accuracyForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
+  const checkboxes = document.querySelectorAll('input[name="serviceRequirements"]:checked');
+        const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
 
+        // Create a new string by joining the array elements with a separator (e.g., comma)
+        const selectedString = selectedValues.join(', ');
+            // Gather form data
+            console.log(selectedString)
             // Gather form data
             const formData = {
                 firstName: document.getElementById("firstName").value,
@@ -344,7 +365,7 @@
                 businessModel: document.getElementById("businessModel").value,
                 ordersPerMonth: document.getElementById("ordersPerMonth").value,
                 storageNeeded: document.getElementById("storageNeeded").value,
-                serviceRequirements: document.getElementById("serviceRequirements").value,
+                serviceRequirements: selectedString,
                 message: document.getElementById("message").value,
                 // terms: document.getElementById("terms").checked
             };
