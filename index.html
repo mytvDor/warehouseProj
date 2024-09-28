@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airworks EASI-FULFILL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" /> -->
+  <link rel="icon" type="image/x-icon" href="/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet" />
+
+  <style>
+    * {
+      font-family: "Inria Sans", sans-serif;
+      font-optical-sizing: auto;
+      /* font-weight: <weight>; */
+      font-style: normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h5 {
+      font-family: "Inria Sans", sans-serif;
+    }
+
+    .inria-sans-bold {
+      font-family: "Inria Sans", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+  <header class="bg-white py-6">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+      <div class="text-2xl font-bold flex items-center justify-center text-orange-500">
+        <a class="navbar-brand inria-sans-bold" href="/">
+          <img src="images/logo.png" alt="Airworks Logo" style="width: 80px; height: 60px" /></a>
+        <h1 class="text-2xl md:text-4xl">EASI-FULFILL</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#about" class="hover:text-pink-500">About</a></li>
+        <li><a href="#features" class="hover:text-pink-500">Features</a></li>
+        <li><a href="#pricing" class="hover:text-pink-500">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-pink-500">Contact</a></li>
+        <li><a href="fulfillment.html" class="hover:text-pink-500">Fulfillment</a></li>
+      </ul>
+      <button class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-500">
+        Contact Us
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">
+            Your Trusty Online Delivery Pick-up Service
+          </h1>
+          <p class="text-gray-600 mb-8 text-lg">
+            Focus exclusively on moving goods and cargo with the popular
+            online freight forwarding app
+          </p>
+          <button class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-500"
+            onClick="document.getElementsByClassName('.reasons').scrollIntoView();">
+            Get Started
+          </button>
+        </div>
+        <div class="md:w-1/2 md:h-1/2">
+          <img src="images/banner_main.jpg" alt="Delivery illustration" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons py-10 bg-gray-100 m-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+            <img src="images/banner_1.jpg" alt="Delivery process" class="rounded-lg" />
+          </div>
+          <div class="md:w-1/2 md:m-10">
+            <h2 class="text-3xl font-bold mb-12 text-left">
+              Reason why choosing our Delivery Service
+            </h2>
+            <p class="text-gray-600 mb-8 text-lg">
+              Our delivery service application uses a direct point-to-point
+              delivery model at all points in US. After you order, the vehicle
+              will come directly to your pick up address and deliver your
+              goods immediately without stopping.
+            </p>
+            <!-- <button
+                class="bg-pink-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-600"
+              >
+                Learn More
+              </button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages py-10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          What are the advantages of
+          <span class="text-orange-500">Airworks EASI-FULFILL</span>?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 flex flex-col items-center text-center justify-center">
+            <img src="images/search.png" alt="Delivery process" class="rounded-lg mb-4" height="75px" width="75px" />
+
+            <h3 class="font-bold mb-4 text-xl text-orange-500">
+              Monitor Your Package
+            </h3>
+            <p class="text-gray-600">
+              Focus exclusively on moving goods and cargo with the popular
+              App.
+            </p>
+          </div>
+          <div class="bg-white p-8 flex flex-col items-center text-center justify-center">
+            <img src="images/discount.png" alt="Delivery process" class="rounded-lg mb-4" height="75px" width="75px" />
+
+            <h3 class="font-bold mb-4 text-xl text-orange-500">
+              Shipping Discount
+            </h3>
+            <p class="text-gray-600">
+              Focus exclusively on moving goods and cargo with the popular
+              App.
+            </p>
+          </div>
+          <div class="bg-white p-8 flex flex-col items-center text-center justify-center">
+            <img src="images/delivery-status.png" alt="Delivery process" class="rounded-lg mb-4" height="100px"
+              width="100px" />
+
+            <h3 class="font-bold mb-4 text-xl text-orange-500">
+              Free Return
+            </h3>
+            <p class="text-gray-600">
+              Focus exclusively on moving goods and cargo with the popular
+              App.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features py-10 bg-yellow-50">
+      <div class="container mx-auto px-6">
+        <!-- Features and Image Container -->
+        <div class="flex flex-col lg:flex-row gap-6">
+          <!-- Feature items -->
+          <div class="w-full lg:w-3/4">
+            <!-- Header -->
+            <h2 class="text-3xl font-bold mb-10 text-center">
+              Our Famous Features
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Feature items -->
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/location.png" alt="Feature 1" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Tracking System
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 1
+                </p>
+              </div>
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/price.png" alt="Feature 2" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Price Analysis
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 2
+                </p>
+              </div>
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/receipt.png" alt="Feature 3" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Receipt Management
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 3
+                </p>
+              </div>
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/delivery-man.png" alt="Feature 4" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Delivery Tracking
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 4
+                </p>
+              </div>
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/customer-care.png" alt="Feature 5" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Customer Care
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 5
+                </p>
+              </div>
+              <div class="p-4 rounded-lg text-left">
+                <img src="images/report.png" alt="Feature 6" class="w-16 h-16 object-cover mb-4 mx-auto md:mx-0" />
+                <h3 class="font-bold mb-2 text-center md:text-left">
+                  Reporting
+                </h3>
+                <p class="text-center md:text-left">
+                  Description of feature 6
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="w-full lg:w-3/4 flex items-center">
+            <img src="images/Analytics Dashboard.jfif" alt="Feature illustration"
+              class="rounded-lg w-full h-auto bottom-0 left-0" style="object-fit: cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="events bg-gray-100 py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-10 text-center">Our Events</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img
+                src="path_to_image"
+                alt="Event 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-bold mb-2">Why Choose Us?</h3>
+                <p class="mb-4">Brief description of the event</p>
+                <a href="#" class="text-pink-500 hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+    <section class="py-10 bg-gray-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem]">
+            Frequently asked questions
+          </h2>
+        </div>
+        <div class="accordion-group" data-accordion="default-accordion">
+          <div
+            class="accordion bg-white p-4 rounded-xl transition duration-500 accordion-active:bg-yellow-50 accordion-active:border-yellow-600 mb-8 lg:p-4 active"
+            id="basic-heading-one-with-icon">
+            <button
+              class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-yellow-500 accordion-active:font-medium accordion-active:text-yellow-500"
+              aria-controls="basic-collapse-one-with-icon">
+              <h5>How can I reset my password?</h5>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-yellow-500 accordion-active:hidden group-hover:text-yellow-500 origin-center"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-yellow-500 accordion-active:block group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div id="basic-collapse-one-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+              aria-labelledby="basic-heading-one" style="max-height: 250px">
+              <p class="text-base text-gray-900 font-normal leading-6">
+                To create an account, find the 'Sign up' or 'Create account'
+                button, fill out the registration form with your personal
+                information, and click 'Create account' or 'Sign up.' Verify
+                your email address if needed, and then log in to start using
+                the platform.
+              </p>
+            </div>
+          </div>
+          <div
+            class="accordion bg-white p-4 rounded-xl accordion-active:bg-yellow-50 accordion-active:border-yellow-600 mb-8 lg:p-4"
+            id="basic-heading-two-with-icon">
+            <button
+              class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-yellow-500 accordion-active:font-medium accordion-active:text-yellow-500"
+              aria-controls="basic-collapse-two-with-icon">
+              <h5>How do I update my billing information?</h5>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-yellow-500 accordion-active:hidden group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-yellow-500 accordion-active:block group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+              aria-labelledby="basic-heading-two">
+              <p class="text-base text-gray-900 font-normal leading-6">
+                To create an account, find the 'Sign up' or 'Create account'
+                button, fill out the registration form with your personal
+                information, and click 'Create account' or 'Sign up.' Verify
+                your email address if needed, and then log in to start using
+                the platform.
+              </p>
+            </div>
+          </div>
+          <div
+            class="accordion bg-white p-4 rounded-xl accordion-active:bg-yellow-50 accordion-active:border-yellow-600 mb-8 lg:p-4"
+            id="basic-heading-three-with-icon">
+            <button
+              class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-yellow-500 accordion-active:font-medium accordion-active:text-yellow-500"
+              aria-controls="basic-collapse-three-with-icon">
+              <h5>How can I contact customer support?</h5>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-yellow-500 accordion-active:hidden group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-yellow-500 accordion-active:block group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+              aria-labelledby="basic-heading-three">
+              <p class="text-base text-gray-900 font-normal leading-6">
+                To create an account, find the 'Sign up' or 'Create account'
+                button, fill out the registration form with your personal
+                information, and click 'Create account' or 'Sign up.' Verify
+                your email address if needed, and then log in to start using
+                the platform.
+              </p>
+            </div>
+          </div>
+          <div
+            class="accordion bg-white p-4 rounded-xl accordion-active:bg-yellow-50 accordion-active:border-yellow-600 mb-8 lg:p-4"
+            id="basic-heading-three-with-icon">
+            <button
+              class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-yellow-500 accordion-active:font-medium accordion-active:text-yellow-500"
+              aria-controls="basic-collapse-three-with-icon">
+              <h5>How do I delete my account?</h5>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-yellow-500 accordion-active:hidden group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <svg
+                class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-yellow-500 accordion-active:block group-hover:text-yellow-500"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+              aria-labelledby="basic-heading-three">
+              <p class="text-base text-gray-900 font-normal leading-6">
+                To create an account, find the 'Sign up' or 'Create account'
+                button, fill out the registration form with your personal
+                information, and click 'Create account' or 'Sign up.' Verify
+                your email address if needed, and then log in to start using
+                the platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="bg-yellow-400 text-black py-16">
+    <div class="container flex justify-between mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">
+        Your Trusty Online Delivery <br />
+        Pick-up Service
+      </h2>
+      <button class="bg-black text-white font-semibold px-4 rounded-lg hover:bg-gray-800">
+        Contact Us
+      </button>
+    </div>
+  </section>
+
+  <footer class="bg-black text-white">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div class="mb-6 md:mb-0">
+          <h2 class="logo text-3xl font-bold mb-4 flex items-center">
+            <img src="images/logo.png" alt="Airworks Logo" style="width: 80px; height: 60px" /></a>
+            EASI-FULFILL
+          </h2>
+          <p class="text-sm mb-2">
+            Our delivery service application uses a direct point-to-point
+            delivery model at all points in Singapore.
+          </p>
+          <p class="text-sm mb-4">support@deliver.com</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-pink-500"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg></a>
+            <a href="#" class="text-blue-400"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              </svg></a>
+            <a href="#" class="text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm mb-1">Name*</label>
+              <input type="text" id="name" name="name" placeholder="Full Name"
+                class="w-full p-2 bg-gray-800 rounded text-white" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm mb-1">Email*</label>
+              <input type="email" id="email" name="email" placeholder="Email Address"
+                class="w-full p-2 bg-gray-800 rounded text-white" />
+            </div>
+            <button type="submit" class="px-6 py-2 bg-yellow-400 text-black rounded-full font-medium">
+              Contact Us
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm">
+        <p>2022 Airworks EASI-FULFILL. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>

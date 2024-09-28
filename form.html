@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Accuracy Picking Service Form</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: white;
+        }
+        .msg{
+            margin:30px;
+            padding:20px
+        }
+        .navbar {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .text-logo{
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar .brand {
+            display: flex;
+            align-items: center;
+        }
+        .navbar img {
+            width: 80px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        .navbar-links {
+            display: flex;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .contact-btn {
+            background-color: #fbbf24;
+            color: black;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .contact-btn:hover {
+            background-color: #f59e0b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #008080;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: #ff7f50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #ff6347;
+        }
+        #message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            height: 50px;
+            margin-bottom: 30px;
+            display: flex; 
+            align-items: center;
+
+            justify-content: center;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar-links {
+                height:350px;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                align-items: center;
+                margin-top: 50px;
+            }
+            .tab{
+                padding:55px;
+            }
+            .navbar-links.active {
+                display: flex;
+            }
+            .navbar a {
+                padding: 10px 15px;
+                border-top: 1px solid #f4f4f4;
+            }
+            .navbar-toggle {
+                display: block;
+            }
+            .contact-btn {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="brand">
+                <img src="images/logo.png" alt="Airworks Logo" />
+                <h1 class="text-logo">EASI-FULFILL</h1>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle">☰</button>
+            <nav class="navbar-links" id="navbar-links">
+                <a href="#about"class="tab">About</a>
+                <a href="#features"class="tab">Features</a>
+                <a href="#pricing"class="tab">Pricing</a>
+                <a href="#contact"class="tab">Contact</a>
+                <a href="fulfillment.html"class="tab">Fulfillment</a>
+                <a href="form.html" class="tab">Get Quotes</a>
+                <a href="#" class="contact-btn">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <div id="msg"></div>
+
+        <h1>Get Quotes</h1>
+        <form id="accuracyForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name/Family Name/Surname</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+65 " required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Website / Product Link</label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="startup" name="startup">
+                    <label for="startup">I am a start-up</label>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select Industry</option>
+                        <option value="Event_and_Banquet_Furniture">Event and Banquet Furniture</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="Facility_Management">Facility Management</option>
+                        <option value="Fasion_and_Lifestyle">Fasion and Lifestyle</option>
+                        <option value="Food_and_Beverage">Food and Beverage</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Hair_Care">Hair Care</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Infocomm_and_Telecom">Infocomm and Telecom</option>
+                        <option value="Marketing_Premiums">Marketing Premiums</option>
+                        <option value="Print_and_Media">Print and Media</option>
+                        <option value="Retail_and_ Wholesale">Retail and Wholesale</option>
+                        <option value="Spare_Parts_Management">Spare Parts Management</option>
+
+
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="businessModel">Business Type</label>
+                    <select id="businessModel" name="businessModel" required>
+                        <option value="">Select Business Model</option>
+                        <option value="b2b">B2B</option>
+                        <option value="b2c">B2C</option>
+                        <!-- <option value="c2c">C2C</option> -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ordersPerMonth">Number of Orders Per Month</label>
+                    <input type="number" id="ordersPerMonth" name="ordersPerMonth" required>
+                </div>
+                <div class="form-group">
+                    <label for="storageNeeded">Storage requirement</label>
+                    <select id="storageNeeded" name="storageNeeded" required>
+                        <option value="">Select Storage Needed</option>
+                        <option value="Aircon">Aircon</option>
+                        <option value="non_Aircon">non Aircon</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="serviceRequirements">Service Requirements</label>
+                    <select id="serviceRequirements" name="serviceRequirements" required>
+                        <option value="">Select Service Requirements</option>
+                        <option value="Storage">Storage</option>
+                        <option value="Pick_and_pack">Pick and pack</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="form-group full-width checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Please note that this form submits your interest for services in Singapore.</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+    <script>
+        // Navbar toggle functionality
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        // Form submission logic remains unchanged
+        document.getElementById("accuracyForm").addEventListener("submit", function(event) {
+            // ... (keep the existing form submission code)
+        });
+    </script>
+
+    <script>
+        document.getElementById("accuracyForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                phone: document.getElementById("phone").value,
+                email: document.getElementById("email").value,
+                companyName: document.getElementById("companyName").value,
+                website: document.getElementById("website").value,
+                startup: document.getElementById("startup").checked,
+                industry: document.getElementById("industry").value,
+                businessModel: document.getElementById("businessModel").value,
+                ordersPerMonth: document.getElementById("ordersPerMonth").value,
+                storageNeeded: document.getElementById("storageNeeded").value,
+                serviceRequirements: document.getElementById("serviceRequirements").value,
+                message: document.getElementById("message").value,
+                terms: document.getElementById("terms").checked
+            };
+
+            console.log(formData)
+
+            // collabvisioninfosolution@gmail.com
+            // F43258C3BA67A7301EF41B756DBAD6A3E61F
+            // Username: "newhtmltest@outlook.com",
+            // Password: "064BC4FDADAF391D5D8E42C3AF140502FBA3",
+            Email.send({
+                Host: "smtp.elasticemail.com",
+          Username: "newhtmltest@outlook.com",
+          Password: "064BC4FDADAF391D5D8E42C3AF140502FBA3",
+          To: "mytvdor@gmail.com",
+          From: "newhtmltest@outlook.com",
+                Subject: " Submission",
+                Body: `
+                    <h3>Form Submission Details</h3>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr><th style="border: 1px solid #ddd; padding: 8px;">Field</th><th style="border: 1px solid #ddd; padding: 8px;">Value</th></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">First Name</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.firstName}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Last Name</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.lastName}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Phone</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.phone}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Email</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.email}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Company Name</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.companyName}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Website</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.website}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Startup</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.startup ? 'Yes' : 'No'}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Industry</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.industry}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Business Model</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.businessModel}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Orders Per Month</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.ordersPerMonth}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Storage Needed</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.storageNeeded}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Service Requirements</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.serviceRequirements}</td></tr>
+                        <tr><td style="border: 1px solid #ddd; padding: 8px;">Message</td><td style="border: 1px solid #ddd; padding: 8px;">${formData.message}</td></tr>
+                    </table>
+                `
+            }).then(() => {
+                document.getElementById("msg").innerHTML = "<div class='success' style='padding:20 px; height:50px display:flex; align-items:center; justify-content:center ' >Your message has been sent successfully!</div>";
+                // document.getElementById("accuracyForm").reset();
+            }).catch((error) => {
+                document.getElementById("msg").innerHTML = "<div class='error'>There was an error sending your message. Please try again later.</div>";
+            });
+        });
+    </script>
+</body>
+</html>
